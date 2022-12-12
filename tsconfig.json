@@ -4,8 +4,23 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "baseUrl": "./",
+    "target": "esnext",
+    "moduleResolution": "node",
+    // "experimentalDecorators": true,
+    // "forceConsistentCasingInFileNames": true,
+    // "noImplicitReturns": true,
+    // "suppressImplicitAnyIndexErrors": true,
+    // "declaration": true,
     "paths": {
       "@@/*": [".dumi/tmp/*"]
+      // "@libra/utils": ["./packages/utils/src/index.ts"]
     }
-  }
+  },
+  "include": [
+    // "typings.d.ts",
+    // "**/src/**/*",
+    // ".eslintrc.js",
+    // "jest.config.js",
+    // "**/fixtures"
+  ]
 }
