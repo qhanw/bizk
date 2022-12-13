@@ -1,4 +1,7 @@
-import { local } from './core';
+import { Store } from './';
+
+const local = new Store({ store: window.localStorage, crypto: false });
+
 describe('localStorage', () => {
   it('test number', () => {
     local.set('KEY_NUMBER', 1000);

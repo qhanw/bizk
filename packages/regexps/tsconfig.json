@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "target": "esnext",
+    "moduleResolution": "node"
+    // "esModuleInterop": true
+  }
+}

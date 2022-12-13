@@ -1,7 +1,7 @@
 ---
 hero:
-  title: Site
-  description: 
+  title: LIBRA KITS
+  description:
   actions:
     - text: Hello
       link: /

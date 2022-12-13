@@ -1,5 +1,5 @@
 {
-  "name": "@libra/deps",
+  "name": "@libra/regexps",
   "version": "0.0.1",
   "description": "",
   "module": "dist/esm/index.js",
