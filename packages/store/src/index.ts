@@ -11,21 +11,27 @@ import {
 } from './utils';
 
 type StoreConfig = {
-  store: Storage;
+  /** Storage 存储方式 */
+  mode?: 'local' | 'session';
   /** 是否加密 */
   crypto?: boolean;
-  /** 默认过期时间 */
+  /** 默认过期时间
+   * 例如：过期时间为6个小时，则配置为21600秒
+   */
   expire?: number;
 };
 
 export class Store {
-  constructor({ store, crypto, expire }: StoreConfig) {
-    this.store = store;
+  constructor({ mode = 'local', crypto, expire = 0 }: StoreConfig) {
+    this.store = mode === 'local' ? window.localStorage : window.sessionStorage;
     if (crypto) this.crypto = crypto;
+    if (expire > 0) this.expire = expire;
   }
 
   private crypto = false;
   private store: Storage;
+  // 过期时间小于0,表示永不过期
+  private expire = -1;
 
   private encode(v: string) {
     return this.crypto ? Base64.encode(v) : v;
@@ -96,7 +102,8 @@ export class Store {
    * @param expire: 失效时间，非必填，单位秒
    */
   set(key: string, val: any, expire?: number) {
-    const cacheExpire = expire && expire > 0 ? +new Date() + expire * 1000 : 0;
+    const exp = expire ?? this.expire;
+    const cacheExpire = exp > 0 ? +new Date() + exp * 1000 : 0;
 
     // 如果配置有过期时间
     if (cacheExpire) {
