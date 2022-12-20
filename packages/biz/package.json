@@ -22,5 +22,8 @@
   },
   "devDependencies": {
     "father": "^4.1.1"
+  },
+  "dependencies": {
+    "@libra/utils": "workspace:^0.0.1"
   }
 }

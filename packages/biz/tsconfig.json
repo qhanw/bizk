@@ -4,7 +4,8 @@
     "declaration": true,
     "skipLibCheck": true,
     "baseUrl": "./",
-    "target": "esnext"
+    "target": "esnext",
+    "moduleResolution": "Node"
     // "esModuleInterop": true
   }
 }
