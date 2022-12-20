@@ -3,10 +3,10 @@ hero:
   title: LIBRA KITS
   description:
   actions:
-    - text: Hello
-      link: /
-    - text: World
-      link: /
+    - text: 立即上手
+      link: /utils
+    - text: Github
+      link: https://github.com/libralabs/libra-kits
 features:
   - title: Hello
     emoji: 💎
@@ -18,5 +18,3 @@ features:
     emoji: 🚀
     description: Put ! description here
 ---
-
-libra-kits
