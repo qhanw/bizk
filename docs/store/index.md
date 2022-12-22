@@ -14,7 +14,7 @@ group:
 ### 初始化
 
 ```tsx ｜ pure
-import { Store } from '@libra/store';
+import { Store } from '@libra-kit/store';
 
 const store = new Store({ mode: 'local', crypto: true });
 

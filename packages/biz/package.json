@@ -1,5 +1,5 @@
 {
-  "name": "@libra/biz",
+  "name": "@libra-kit/biz",
   "version": "0.0.1",
   "description": "",
   "module": "dist/esm/index.js",
@@ -24,6 +24,6 @@
     "father": "^4.1.1"
   },
   "dependencies": {
-    "@libra/utils": "workspace:^0.0.1"
+    "@libra-kit/utils": "workspace:^0.0.1"
   }
 }

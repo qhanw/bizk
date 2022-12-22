@@ -32,7 +32,7 @@ group:
 ### 示例
 
 ```tsx | pure
-import { calcTableOptWidth } from '@libra/biz';
+import { calcTableOptWidth } from '@libra-kit/biz';
 
 const { optsWidth, getOptsBtn } = useMemo(() => {
   const editBtn = checkAuth('RISK_MONITOR:LIST_MGT:EDIT');

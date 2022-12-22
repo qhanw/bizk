@@ -1,5 +1,5 @@
 {
-  "name": "@libra/utils",
+  "name": "@libra-kit/utils",
   "version": "0.0.1",
   "description": "",
   "module": "dist/esm/index.js",
