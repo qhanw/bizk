@@ -1,6 +1,6 @@
 {
   "name": "@libra-kit/biz",
-  "version": "0.0.1",
+  "version": "0.0.2-alpha.0",
   "description": "",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -24,6 +24,6 @@
     "father": "^4.1.1"
   },
   "dependencies": {
-    "@libra-kit/utils": "workspace:^0.0.1"
+    "@libra-kit/utils": "workspace:^0.0.2-alpha.0"
   }
 }
