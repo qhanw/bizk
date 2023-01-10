@@ -1,8 +1,8 @@
 ---
 title: calcTableOptWidth
 group:
-  title: 函数
-  order: 1
+  title: 业务函数
+  order: -1
 ---
 
 # calcTableOptWidth
@@ -32,7 +32,7 @@ group:
 ### 示例
 
 ```tsx | pure
-import { calcTableOptWidth } from '@libra-kit/biz';
+import { calcTableOptWidth } from '@bizk/biz';
 
 const { optsWidth, getOptsBtn } = useMemo(() => {
   const editBtn = checkAuth('RISK_MONITOR:LIST_MGT:EDIT');

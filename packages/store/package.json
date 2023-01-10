@@ -1,6 +1,6 @@
 {
-  "name": "@libra-kit/store",
-  "version": "0.0.2-alpha.0",
+  "name": "@bizk/store",
+  "version": "0.0.0",
   "description": "",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",

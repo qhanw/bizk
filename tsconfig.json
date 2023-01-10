@@ -13,7 +13,7 @@
     // "declaration": true,
     "paths": {
       "@@/*": [".dumi/tmp/*"]
-      // "@libra-kit/utils": ["./packages/utils/src/index.ts"]
+      // "@bizk/utils": ["./packages/utils/src/index.ts"]
     }
   },
   "include": [

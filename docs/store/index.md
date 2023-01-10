@@ -1,7 +1,7 @@
 ---
 nav:
   title: Store
-  order: -1
+  order: 0
 group:
   title: 介绍
   order: -1
@@ -14,7 +14,7 @@ group:
 ### 初始化
 
 ```tsx ｜ pure
-import { Store } from '@libra-kit/store';
+import { Store } from '@bizk/store';
 
 const store = new Store({ mode: 'local', crypto: true });
 

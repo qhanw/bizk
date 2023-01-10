@@ -1,10 +1,10 @@
 ---
 hero:
-  title: LIBRA KITS
+  title: BIZ KIT
   description:
   actions:
     - text: 立即上手
-      link: /biz
+      link: /utils
     - text: Github
       link: https://github.com/libralabs/libra-kits
 # features:
