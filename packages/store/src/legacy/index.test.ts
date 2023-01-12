@@ -1,6 +1,6 @@
-import { Store } from './';
+import { Store } from '.';
 
-const local = new Store({ store: window.localStorage, crypto: false });
+const local = new Store({ mode: 'local', crypto: false });
 
 describe('localStorage', () => {
   it('test number', () => {
