@@ -6,7 +6,7 @@ hero:
     - text: 立即上手
       link: /utils
     - text: Github
-      link: https://github.com/libralabs/libra-kits
+      link: https://github.com/qhanw/bizk
 # features:
 #   - title: Hello
 #     emoji: 💎
