@@ -25,3 +25,4 @@ pnpm add @bizk/utils
 - renameKeys
 - arrayToTree (coming soon)
 - treeToArray (coming soon)
+- dicts (coming soon)
