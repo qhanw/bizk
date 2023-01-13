@@ -1,14 +1,24 @@
 ---
 nav:
   title: Regexp
-  order: 0
+  order: 1
 group:
   title: 介绍
   order: -1
 title: 常用正则表达式
 ---
 
-### 手机号码
+### 安装方式
+
+推荐使用`pnpm`作为包管理工具。当然也可使用`npm`或者`yarn`。
+
+```bash
+pnpm add @bizk/regexp
+```
+
+### 示例
+
+#### 手机号码
 
 ```tsx | pure
 import { iphone } from '@bizk/regexp';
