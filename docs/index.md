@@ -16,8 +16,8 @@ features:
     link: /store
     # emoji: 🌈
     description: 一个简单的，用于处理本地信息存储的 Storage 库，默认存储方式为localStorage
-  - title: 'Regexp'
-    link: /regexp
+  - title: 'Regexps'
+    link: /regexps
     #emoji: 🚀
     description: 常用正则表达式，统一应用站点正则校验，保障同一规则下数据安全。
 ---
