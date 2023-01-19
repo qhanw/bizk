@@ -21,6 +21,6 @@ pnpm add @bizk/components
 
 ### 组件列表
 
-- TabLink
+- TabLink (coming soon)
 - SortableTable (coming soon)
 - DragTableColumn (coming soon)

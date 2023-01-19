@@ -9,6 +9,33 @@ group:
 
 用于计算表格操作列宽度。在表格操作列项存在权限控制的情况下，会出现列宽不定的情况，该方法主要解决此类问题。
 
+### 示例
+
+```tsx | pure
+import { calcTableOptWidth } from '@bizk/biz';
+
+const { optsWidth, getOptsBtn } = useMemo(() => {
+  const editBtn = checkAuth('AUTH:EDIT');
+  const delBtn = checkAuth('AUTH:DEL');
+
+  return {
+    optsWidth: calcTableOptWidth({
+      2: [editBtn, delBtn],
+      4: mgtBtn,
+    }),
+    getOptsBtn: (record: NameListItem) => {
+      const { listCode, dictListType } = record;
+      return (
+        <Space size={0} split={<Divider type="vertical" />}>
+          {editBtn ? <a>编辑</a> : null}
+          {delBtn ? <a>删除</a> : null}
+        </Space>
+      );
+    },
+  };
+}, []);
+```
+
 ### API
 
 | 参数     | 说明                                     | 类型                    | 默认值 |
@@ -28,44 +55,3 @@ group:
 | limit   | 操作项 显示个数限制    | number  | 3      |
 | extra   | 更多下拉按钮配置       | number  | 42     |
 | link    | 是否采用文本链接的方法 | boolean | true   |
-
-### 示例
-
-```tsx | pure
-import { calcTableOptWidth } from '@bizk/biz';
-
-const { optsWidth, getOptsBtn } = useMemo(() => {
-  const editBtn = checkAuth('RISK_MONITOR:LIST_MGT:EDIT');
-  const mgtBtn = checkAuth('RISK_MONITOR:LIST_MGT:MGT');
-  const delBtn = checkAuth('RISK_MONITOR:LIST_MGT:DEL');
-
-  return {
-    optsWidth: calcTableOptWidth({
-      2: [editBtn, delBtn],
-      4: mgtBtn,
-    }),
-    getOptsBtn: (record: NameListItem) => {
-      const { listCode, dictListType } = record;
-      return (
-        <Space size={0} split={<Divider type="vertical" />}>
-          {editBtn ? (
-            <ALink onClick={() => setSelected(record)}>编辑</ALink>
-          ) : null}
-          {mgtBtn ? (
-            <ALink
-              to={{
-                pathname: '/list-mgt/list-value-mgt',
-                query: { listCode: listCode!, listType: dictListType! },
-              }}
-              target="_blank"
-            >
-              管理名单
-            </ALink>
-          ) : null}
-          {delBtn ? <ALink onClick={() => onDel(record)}>删除</ALink> : null}
-        </Space>
-      );
-    },
-  };
-}, []);
-```
