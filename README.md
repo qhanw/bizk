@@ -2,10 +2,15 @@
 
 一套用于业务开发的工具集合，统一开发工具便于后期多业务维护，提升开发效率。
 
-- @bizk/store [![NPM version][npm-image-store]][npm-url-store][![NPM downloads][download-image-store]][download-url-store]
-- @bizk/utils [![NPM version][npm-image-utils]][npm-url-utils][![NPM downloads][download-image-utils]][download-url-utils]
-- @bizk/regexps [![NPM version][npm-image-regexps]][npm-url-regexps][![NPM downloads][download-image-regexps]][download-url-regexps]
+| 套件                          | 版本                                                 | 下载                                                             |
+| :---------------------------- | :--------------------------------------------------- | :--------------------------------------------------------------- |
+| [@bizk/store][bizk-store]     | [![NPM version][npm-image-store]][npm-url-store]     | [![NPM downloads][download-image-store]][download-url-store]     |
+| [@bizk/utils][bizk-utils]     | [![NPM version][npm-image-utils]][npm-url-utils]     | [![NPM downloads][download-image-utils]][download-url-utils]     |
+| [@bizk/regexps][bizk-regexps] | [![NPM version][npm-image-regexps]][npm-url-regexps] | [![NPM downloads][download-image-regexps]][download-url-regexps] |
 
+[bizk-store]: https://github.com/qhanw/bizk/tree/main/packages/store
+[bizk-utils]: https://github.com/qhanw/bizk/tree/main/packages/utils
+[bizk-regexps]: https://github.com/qhanw/bizk/tree/main/packages/regexps
 [npm-image-store]: https://img.shields.io/npm/v/@bizk/store.svg?style=flat
 [npm-url-store]: https://npmjs.org/package/@bizk/store
 [download-image-store]: https://img.shields.io/npm/dm/@bizk/store.svg?style=flat
