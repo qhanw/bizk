@@ -21,22 +21,11 @@
     "access": "public"
   },
   "devDependencies": {
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "antd": "^5.1.7",
-    "father": "^4.1.1",
-    "query-string": "^8.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.8.0"
+    "father": "^4.1.1"
   },
   "peerDependencies": {
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "antd": "^5.1.7",
-    "query-string": "^8.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.8.0"
+    "antd": ">=4.24.0",
+    "react": ">=16.9.0",
+    "umi": ">=4.0.0"
   }
 }

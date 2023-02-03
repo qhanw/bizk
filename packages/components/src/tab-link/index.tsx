@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'umi';
 import { Typography, Button } from 'antd';
 import type { ButtonProps } from 'antd';
 import type { LinkProps } from 'antd/es/typography/Link';
@@ -12,7 +12,12 @@ type TabLinkProps = LinkProps & {
   button?: ButtonProps | false;
 };
 
-const TabLink: React.FC<TabLinkProps> = ({ children, to, button, ...other }) => {
+const TabLink: React.FC<TabLinkProps> = ({
+  children,
+  to,
+  button,
+  ...other
+}) => {
   const { pathname, search, query } = to || {};
 
   const childElem = button ? (
