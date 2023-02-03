@@ -1,4 +1,5 @@
 import { defineConfig } from 'dumi';
+import path from 'path';
 
 export default defineConfig({
   themeConfig: {
@@ -9,4 +10,15 @@ export default defineConfig({
   },
 
   favicons: ['/favicon.png'],
+
+  resolve: {
+    atomDirs: [
+      { type: 'utils', dir: 'packages/utils/src' },
+      { type: 'component', dir: 'packages/components/src' },
+    ],
+  },
+  // 包引入配置
+  alias: {
+    '@bizk/components': path.resolve(__dirname, 'packages/components/src'),
+  },
 });

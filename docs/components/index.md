@@ -21,6 +21,7 @@ pnpm add @bizk/components
 
 ### 组件列表
 
-- TabLink (coming soon)
+- CheckAuth (coming soon)
+- [TabLink (coming soon)](/components/tab-link)
 - SortableTable (coming soon)
 - DragTableColumn (coming soon)

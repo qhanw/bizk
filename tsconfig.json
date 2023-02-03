@@ -1,19 +1,20 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
     "baseUrl": "./",
     "target": "esnext",
     "moduleResolution": "node",
-    // "experimentalDecorators": true,
-    // "forceConsistentCasingInFileNames": true,
-    // "noImplicitReturns": true,
-    // "suppressImplicitAnyIndexErrors": true,
-    // "declaration": true,
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "declaration": true,
+    "skipLibCheck": true,
     "paths": {
-      "@@/*": [".dumi/tmp/*"]
-      // "@bizk/utils": ["./packages/utils/src/index.ts"]
+      "@@/*": [".dumi/tmp/*"],
+      "@bizk/components": ["./packages/components/src/index.ts"]
     }
   },
   "include": [
