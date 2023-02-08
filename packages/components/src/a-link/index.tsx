@@ -6,13 +6,13 @@ import type { LinkProps } from 'antd/es/typography/Link';
 import queryString from 'query-string';
 import type { ParsedQuery } from 'query-string';
 
-type TabLinkProps = LinkProps & {
+type ALinkProps = LinkProps & {
   to?: { pathname?: string; search?: string; query?: ParsedQuery };
   state?: any;
   button?: ButtonProps | false;
 };
 
-const TabLink: React.FC<TabLinkProps> = ({
+const ALink: React.FC<ALinkProps> = ({
   children,
   to,
   button,
@@ -47,4 +47,4 @@ const TabLink: React.FC<TabLinkProps> = ({
   );
 };
 
-export default TabLink;
+export default ALink;

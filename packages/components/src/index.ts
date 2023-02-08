@@ -1,1 +1,1 @@
-export { default as TabLink } from './tab-link';
+export { default as ALink } from './a-link';

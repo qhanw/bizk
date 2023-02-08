@@ -1,5 +1,5 @@
 ---
-title: TabLink
+title: ALink
 group:
   title: Common
   order: -1
@@ -7,9 +7,9 @@ demo:
   cols: 2
 ---
 
-# TabLink
+# ALink
 
-`TabLink` 组件是对 `react-router-dom` 的 `Link` 组件 与 `antd` 的 `Typography.Link` 组件的扩展，使其具有`Link`标签的页面导航功能，同时具备`Typography.Link`的相关功能。减少在业务开发中，频繁组合该两种组件的功能。
+`ALink` 取自 html `a` 标签与`react-router`、`Link`标签的组合，是对 `react-router-dom` 的 `Link` 组件 与 `antd` 的 `Typography.Link` 组件的扩展，使其具有`Link`标签的页面导航功能，同时具备`Typography.Link`的相关功能。减少在业务开发中，频繁组合该两种组件的功能。
 
 ### 代码演示
 
@@ -20,7 +20,7 @@ demo:
 
 ### API
 
-`TabLink` 组件是对 `react-router-dom` 的 `Link` 组件 与 `antd` 的 `Typography.Link` 组件的扩展，在此处只列出额新增的 API 其它 AP 请查看对应组件的文档。
+由于`ALink` 组件是对 `react-router-dom` 的 `Link` 组件 与 `antd` 的 `Typography.Link` 组件的扩展，在此处只列出额新增的 API 其它 AP 请查看对应组件的文档。
 
 | 参数   | 说明                               | 类型                                                        | 默认值 |
 | :----- | :--------------------------------- | :---------------------------------------------------------- | :----- |
