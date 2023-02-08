@@ -8,16 +8,20 @@ hero:
     - text: Github
       link: https://github.com/qhanw/bizk
 features:
+  - title: 'Components'
+    link: /components
+    emoji: 🌈
+    description: 基于antd、pro-components组件库，封装的适用于业务的公共组件
   - title: Utils
     link: /utils
-    # emoji: 💎
+    emoji: ⚒️
     description: 业务开发中常用的，基本公共函数处理方法，用以提升业务开发效率，统一函数使用规范。
   - title: Store
     link: /store
-    # emoji: 🌈
+    emoji: 🗄️
     description: 一个简单的，用于处理本地信息存储的 Storage 库，默认存储方式为localStorage
   - title: 'Regexps'
     link: /regexps
-    #emoji: 🚀
+    emoji: 🔥
     description: 常用正则表达式，统一应用站点正则校验，保障同一规则下数据安全。
 ---

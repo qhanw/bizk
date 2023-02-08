@@ -1,7 +1,7 @@
 ---
 nav:
   title: Regexps
-  order: 1
+  order: 3
 group:
   title: 介绍
   order: -1

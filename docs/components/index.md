@@ -1,7 +1,7 @@
 ---
 nav:
   title: Components
-  order: 2
+  order: 0
 group:
   title: 介绍
   order: -1
@@ -22,6 +22,6 @@ pnpm add @bizk/components
 ### 组件列表
 
 - CheckAuth (coming soon)
-- [TabLink (coming soon)](/components/tab-link)
+- [ALink (coming soon)](/components/a-link)
 - SortableTable (coming soon)
 - DragTableColumn (coming soon)

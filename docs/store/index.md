@@ -1,7 +1,7 @@
 ---
 nav:
   title: Store
-  order: 0
+  order: 2
 group:
   title: 介绍
   order: -1
