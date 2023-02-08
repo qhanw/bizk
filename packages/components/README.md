@@ -14,3 +14,15 @@
 ```bash
 pnpm add @bizk/components
 ```
+
+### 使用方式
+
+```tsx
+import { ALink } from '@bizk/components';
+
+const App = () => (
+  <>
+    <ALink href="https://bizk.qhan.wang/">Click me!</ALink>
+  </>
+);
+```

@@ -9,7 +9,7 @@ demo:
 
 # ALink
 
-`ALink` 取自 html `a` 标签与`react-router`、`Link`标签的组合，是对 `react-router-dom` 的 `Link` 组件 与 `antd` 的 `Typography.Link` 组件的扩展，使其具有`Link`标签的页面导航功能，同时具备`Typography.Link`的相关功能。减少在业务开发中，频繁组合该两种组件的功能。
+`ALink` 取自 html `a` 标签与`react-router`的`Link`标签的组合，是对 `react-router-dom` 的 `Link` 组件 与 `antd` 的 `Typography.Link` 组件的扩展，使其具有`Link`标签的页面导航功能，同时具备`Typography.Link`的相关功能。减少在业务开发中，频繁组合该两种组件的功能。
 
 ### 代码演示
 
