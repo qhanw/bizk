@@ -1,4 +1,9 @@
-type LabelValue = { label: string; value: string; children?: []; editable?: boolean };
+type LabelValue = {
+  label: string;
+  value: string;
+  children?: [];
+  editable?: boolean;
+};
 
 function inherit(api: any, o: any) {
   for (let p in api) {
@@ -13,7 +18,9 @@ function inherit(api: any, o: any) {
 type DictAPI = {
   _name?: string;
   toName: () => string | undefined;
-  toMap: () => Map<string, { text: string }> | undefined;
+  toMap: (
+    cfg?: Record<string, any>,
+  ) => Map<string, { text: string; [propName: string]: any }> | undefined;
 };
 
 const dictAPI: DictAPI = {
@@ -22,10 +29,10 @@ const dictAPI: DictAPI = {
   toName: function () {
     return this._name;
   },
-  toMap: function () {
+  toMap: function (cfg) {
     if (Array.isArray(this)) {
       return this?.reduce((prev, curr) => {
-        prev.set(curr.value, { text: curr.label });
+        prev.set(curr.value, { text: curr.label, ...cfg });
         return prev;
       }, new Map());
     }
@@ -51,7 +58,9 @@ const dictBaseAPI: DictBaseAPI = {
   _data: {},
   // 取出字典映射表
   _take: function () {
+    // console.log('this._init', this._init);
     if (!this._init) this.init();
+
     return this._data || {};
   },
   // 更新字典
@@ -76,16 +85,21 @@ const dictBaseAPI: DictBaseAPI = {
   },
 };
 
+type Fn = <T>(key: T) => (LabelValue[] & DictAPI) | undefined;
+
 function Dict() {
-  const dict = inherit(dictBaseAPI, function <T>(key: T): (LabelValue[] & DictAPI) | undefined {
+  const dict = inherit(dictBaseAPI, function (key) {
     const target = dict._take()[key as string];
 
     if (target) {
-      return inherit({ ...dictAPI, _name: target.label }, target.children || []);
+      return inherit(
+        { ...dictAPI, _name: target.label },
+        target.children || [],
+      );
     } else {
       return undefined;
     }
-  }) as { <T>(key: T): (LabelValue[] & DictAPI) | undefined } & DictBaseAPI;
+  } as Fn) as Fn & DictBaseAPI;
 
   return dict;
 }
