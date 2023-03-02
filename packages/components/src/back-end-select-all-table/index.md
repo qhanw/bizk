@@ -1,8 +1,8 @@
 ---
 title: BackEndSelectAllTable
 group:
-  title: Common
-  order: -1
+  title: 表格
+  order: 1
 demo:
   cols: 2
 ---

@@ -24,10 +24,17 @@
     "father": "^4.1.1"
   },
   "peerDependencies": {
+    "@ant-design/icons": ">=4.8.0",
     "antd": ">=4.24.0",
     "query-string": ">=8.0.0",
     "react": ">=16.9.0",
     "react-router-dom": ">=6.0.0"
   },
-  "gitHead": "0e2eb4bd22c4a85472a68df195b17834fb1071c0"
+  "gitHead": "0e2eb4bd22c4a85472a68df195b17834fb1071c0",
+  "dependencies": {
+    "@dnd-kit/core": "^6.0.8",
+    "@dnd-kit/modifiers": "^6.0.1",
+    "@dnd-kit/sortable": "^7.0.2",
+    "clsx": "^1.2.1"
+  }
 }

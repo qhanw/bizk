@@ -1,0 +1,52 @@
+$btn-prefix-cls: 'bizkui';
+
+.#{$btn-prefix-cls} {
+  @keyframes pop {
+    0% {
+      transform: translate3d(var(--translate-x, 0), var(--translate-y, 0), 0)
+        scale(1);
+      box-shadow: var(--box-shadow-picked-up);
+    }
+
+    100% {
+      transform: translate3d(var(--translate-x, 0), var(--translate-y, 0), 0)
+        scale(var(--scale));
+      box-shadow: var(--box-shadow-picked-up);
+    }
+  }
+
+  &-dnd {
+    .ant-table-tbody td[data-cypress='draggable-handle'] {
+      cursor: pointer;
+    }
+  }
+
+  // 元素拖动样式
+  &-dragItem {
+    position: relative;
+    touch-action: none;
+    transform: translate3d(var(--translate-x, 0), var(--translate-y, 0), 0)
+      scale(var(--scale, 1));
+    transition: box-shadow 200ms ease;
+  }
+
+  &-dragOverlay {
+    --scale: 1;
+    --box-shadow-picked-up: 0 0 0 calc(1px / var(--scale-x, 1))
+        rgba(63, 63, 68, 0.05),
+      -1px 0 8px 0 rgba(34, 33, 81, 0.01), 0 8px 8px 0 rgba(34, 33, 81, 0.25),
+      1px 0 8px 0 rgba(34, 33, 81, 0.01), 0 -8px 8px 0 rgba(34, 33, 81, 0.25);
+
+    animation: pop 200ms cubic-bezier(0.18, 0.67, 0.6, 1.22);
+    box-shadow: var(--box-shadow-picked-up);
+    z-index: 1;
+
+    // 禁用单元格元素默认行为
+    > td {
+      border-color: transparent !important;
+      > span {
+        pointer-events: none;
+      }
+    }
+  }
+}

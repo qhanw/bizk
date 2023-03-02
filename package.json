@@ -27,6 +27,7 @@
     ]
   },
   "devDependencies": {
+    "@ant-design/icons": "^5.0.1",
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
     "@types/jest": "^29.4.0",
