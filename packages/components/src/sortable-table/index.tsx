@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { DragOutlined } from '@ant-design/icons';
+
 import { DndContext } from '@dnd-kit/core';
 import type { DragEndEvent } from '@dnd-kit/core';
 import {
@@ -27,24 +27,24 @@ export default function SortableTable({
   children,
   onChange,
 }: SortableTableProps) {
-  const { dataSource, columns, items, rowKey } = useMemo(() => {
+  const { dataSource, columns, items, rowKey, sortable } = useMemo(() => {
     const props = children?.props as any;
 
+    const ds = props?.dataSource || props?.value;
+    const col = props?.columns;
+
+    const sortable = ds?.length > 1;
+
     return {
-      dataSource: props?.dataSource,
-      columns: [
-        {
-          title: 'sort',
-          dataIndex: 'sort',
-          key: 'sort',
-          width: 46,
-          render: () => <DragOutlined />,
-          align: 'center',
-        },
-        ...props?.columns,
-      ],
-      items: props?.dataSource?.map((c: any) => c[props?.rowKey]),
+      dataSource: ds,
+      // editable: 兼容 pro-table
+      columns: sortable
+        ? [{ key: 'sort', width: 32, editable: false }, ...col]
+        : col,
+      items: ds?.map((c: any) => c[props?.rowKey]) || [],
+
       rowKey: props?.rowKey,
+      sortable,
     };
   }, [children?.props]);
 
@@ -72,13 +72,10 @@ export default function SortableTable({
       onDragEnd={handleDragEnd}
     >
       <SortableContext items={items} strategy={verticalListSortingStrategy}>
-        {React.cloneElement(children as any, {
-          dataSource,
+        {React.cloneElement(children as React.ReactElement, {
           columns,
           className: `${prefixCls}-dnd`,
-          ...(dataSource?.length > 1
-            ? { components: { body: { row: SortableItem } } }
-            : {}),
+          ...(sortable ? { components: { body: { row: SortableItem } } } : {}),
         })}
       </SortableContext>
     </DndContext>

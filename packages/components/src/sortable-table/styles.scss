@@ -17,7 +17,8 @@ $btn-prefix-cls: 'bizkui';
 
   &-dnd {
     .ant-table-tbody td[data-cypress='draggable-handle'] {
-      cursor: pointer;
+      touch-action: none;
+      cursor: move;
     }
   }
 

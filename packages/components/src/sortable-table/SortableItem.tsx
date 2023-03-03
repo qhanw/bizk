@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-
+import { MenuOutlined } from '@ant-design/icons';
 import { useSortable } from '@dnd-kit/sortable';
 
 const prefixCls = 'bizkui';
@@ -43,10 +43,11 @@ export function SortableItem(props: any) {
       {React.Children.map(children, (child) => {
         if (child.key === 'sort') {
           return React.cloneElement(child, {
+            children: <MenuOutlined />,
             additionalProps: {
               ...listeners,
-              'data-cypress': 'draggable-handle',
               id: 'draggable-handle',
+              'data-cypress': 'draggable-handle',
             },
           });
         }
