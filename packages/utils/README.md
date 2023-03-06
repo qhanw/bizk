@@ -19,6 +19,6 @@ pnpm add @bizk/utils
 
 - calcTableOptWidth
 - renameKeys
+- dict
 - arrayToTree (coming soon)
 - treeToArray (coming soon)
-- dicts (coming soon)

@@ -1,17 +1,28 @@
 {
   "name": "@bizk/utils",
   "version": "0.0.3",
-  "description": "",
+  "description": "业务开发中常用的，基本公共函数处理方法，用以提升业务开发效率，统一函数使用规范。",
+  "keywords": [
+    "utils",
+    "dict",
+    "renameKeys",
+    "calcTableOptWidth"
+  ],
+  "homepage": "https://github.com/qhanw/bizk/tree/main/packages/utils#readme",
+  "bugs": "https://github.com/qhanw/bizk/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qhanw/bizk"
+  },
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {
-    "dev": "father dev",
     "build": "father build",
-    "build:deps": "father prebundle",
     "prepublishOnly": "father doctor && npm run build"
   },
-  "keywords": [],
-  "authors": [],
+  "authors": [
+    "qhanw <whenhan@foxmail.com> (https://github.com/qhanw)"
+  ],
   "license": "MIT",
   "files": [
     "dist",
@@ -19,8 +30,5 @@
   ],
   "publishConfig": {
     "access": "public"
-  },
-  "devDependencies": {
-    "father": "^4.1.1"
   }
 }
