@@ -1,6 +1,6 @@
 {
   "name": "@bizk/utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "业务开发中常用的，基本公共函数处理方法，用以提升业务开发效率，统一函数使用规范。",
   "keywords": [
     "utils",
