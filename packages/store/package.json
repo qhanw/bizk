@@ -1,17 +1,27 @@
 {
   "name": "@bizk/store",
   "version": "0.0.4-alpha.0",
-  "description": "",
+  "description": "一个简单的用于处理本地信息存储的Storage库，默认存储方式为localStorage。",
+  "keywords": [
+    "store",
+    "localStorage",
+    "sessionStorage"
+  ],
+  "homepage": "https://github.com/qhanw/bizk/tree/main/packages/store#readme",
+  "bugs": "https://github.com/qhanw/bizk/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qhanw/bizk"
+  },
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {
-    "dev": "father dev",
     "build": "father build",
-    "build:deps": "father prebundle",
     "prepublishOnly": "father doctor && npm run build"
   },
-  "keywords": [],
-  "authors": [],
+  "authors": [
+    "qhanw <whenhan@foxmail.com> (https://github.com/qhanw)"
+  ],
   "license": "MIT",
   "files": [
     "dist",
@@ -19,9 +29,6 @@
   ],
   "publishConfig": {
     "access": "public"
-  },
-  "devDependencies": {
-    "father": "^4.1.1"
   },
   "dependencies": {
     "js-base64": "^3.7.3"

@@ -1,17 +1,23 @@
 {
   "name": "@bizk/components",
   "version": "0.0.4",
-  "description": "",
+  "description": "基于antd额外扩展配置的常用业务组件，用以提升业务开发效率，避免同一类似功能组件多次实现。",
+  "keywords": [
+    "antd",
+    "components",
+    "@bizk/components"
+  ],
+  "homepage": "https://github.com/qhanw/bizk/tree/main/packages/components#readme",
+  "bugs": "https://github.com/qhanw/bizk/issues",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {
-    "dev": "father dev",
     "build": "father build",
-    "build:deps": "father prebundle",
     "prepublishOnly": "father doctor && npm run build"
   },
-  "keywords": [],
-  "authors": [],
+  "authors": [
+    "qhanw <whenhan@foxmail.com> (https://github.com/qhanw)"
+  ],
   "license": "MIT",
   "files": [
     "dist",
@@ -20,9 +26,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "devDependencies": {
-    "father": "^4.1.1"
-  },
   "peerDependencies": {
     "@ant-design/icons": ">=4.8.0",
     "antd": ">=4.24.0",
@@ -30,7 +33,6 @@
     "react": ">=16.9.0",
     "react-router-dom": ">=6.0.0"
   },
-  "gitHead": "0e2eb4bd22c4a85472a68df195b17834fb1071c0",
   "dependencies": {
     "@dnd-kit/core": "^6.0.8",
     "@dnd-kit/modifiers": "^6.0.1",

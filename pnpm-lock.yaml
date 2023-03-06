@@ -50,29 +50,20 @@ importers:
       '@dnd-kit/modifiers': ^6.0.1
       '@dnd-kit/sortable': ^7.0.2
       clsx: ^1.2.1
-      father: ^4.1.1
     dependencies:
       '@dnd-kit/core': 6.0.8
       '@dnd-kit/modifiers': 6.0.1_@dnd-kit+core@6.0.8
       '@dnd-kit/sortable': 7.0.2_@dnd-kit+core@6.0.8
       clsx: 1.2.1
-    devDependencies:
-      father: 4.1.3
 
   packages/regexps:
-    specifiers:
-      father: ^4.1.1
-    devDependencies:
-      father: 4.1.3
+    specifiers: {}
 
   packages/store:
     specifiers:
-      father: ^4.1.1
       js-base64: ^3.7.3
     dependencies:
       js-base64: 3.7.4
-    devDependencies:
-      father: 4.1.3
 
   packages/utils:
     specifiers: {}
