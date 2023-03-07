@@ -13,24 +13,23 @@
     "type": "git",
     "url": "https://github.com/qhanw/bizk"
   },
-  "module": "dist/esm/index.js",
-  "types": "dist/esm/index.d.ts",
+  "authors": [
+    "qhanw <whenhan@foxmail.com> (https://github.com/qhanw)"
+  ],
   "scripts": {
     "build": "father build",
     "prepublishOnly": "father doctor && npm run build"
   },
-  "authors": [
-    "qhanw <whenhan@foxmail.com> (https://github.com/qhanw)"
-  ],
-  "license": "MIT",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
   "files": [
-    "dist",
-    "compiled"
+    "dist"
   ],
+  "dependencies": {
+    "js-base64": "^3.7.3"
+  },
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
-    "js-base64": "^3.7.3"
-  }
+  "license": "MIT"
 }

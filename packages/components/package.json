@@ -9,22 +9,23 @@
   ],
   "homepage": "https://github.com/qhanw/bizk/tree/main/packages/components#readme",
   "bugs": "https://github.com/qhanw/bizk/issues",
-  "module": "dist/esm/index.js",
-  "types": "dist/esm/index.d.ts",
+  "authors": [
+    "qhanw <whenhan@foxmail.com> (https://github.com/qhanw)"
+  ],
   "scripts": {
     "build": "father build",
     "prepublishOnly": "father doctor && npm run build"
   },
-  "authors": [
-    "qhanw <whenhan@foxmail.com> (https://github.com/qhanw)"
-  ],
-  "license": "MIT",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
   "files": [
-    "dist",
-    "compiled"
+    "dist"
   ],
-  "publishConfig": {
-    "access": "public"
+  "dependencies": {
+    "@dnd-kit/core": "^6.0.8",
+    "@dnd-kit/modifiers": "^6.0.1",
+    "@dnd-kit/sortable": "^7.0.2",
+    "clsx": "^1.2.1"
   },
   "peerDependencies": {
     "@ant-design/icons": ">=4.8.0",
@@ -33,10 +34,8 @@
     "react": ">=16.9.0",
     "react-router-dom": ">=6.0.0"
   },
-  "dependencies": {
-    "@dnd-kit/core": "^6.0.8",
-    "@dnd-kit/modifiers": "^6.0.1",
-    "@dnd-kit/sortable": "^7.0.2",
-    "clsx": "^1.2.1"
-  }
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
 }

@@ -11,21 +11,20 @@
     "type": "git",
     "url": "https://github.com/qhanw/bizk"
   },
-  "module": "dist/esm/index.js",
-  "types": "dist/esm/index.d.ts",
+  "authors": [
+    "qhanw <whenhan@foxmail.com> (https://github.com/qhanw)"
+  ],
   "scripts": {
     "build": "father build",
     "prepublishOnly": "father doctor && npm run build"
   },
-  "authors": [
-    "qhanw <whenhan@foxmail.com> (https://github.com/qhanw)"
-  ],
-  "license": "MIT",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
   "files": [
-    "dist",
-    "compiled"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "license": "MIT"
 }
