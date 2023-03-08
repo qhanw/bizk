@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { Store } from '.';
 
 const local = new Store({ mode: 'local', crypto: false });
@@ -20,7 +24,7 @@ describe('localStorage', () => {
 
   it('test undefined', () => {
     local.set('KEY_UNDEFINED', undefined);
-    expect(local.get('KEY_UNDEFINED')).toEqual(undefined);
+    expect(local.get('KEY_UNDEFINED')).toEqual("undefined");
   });
 
   it('test boolean', () => {

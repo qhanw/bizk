@@ -10,7 +10,8 @@
     "dev:fa": "father dev",
     "build": "father build",
     "build:deps": "father prebundle",
-    "prepublishOnly": "father doctor && npm run build"
+    "prepublishOnly": "father doctor && npm run build",
+    "test": "jest"
   },
   "authors": [
     "qhanw <whenhan@foxmail.com> (https://github.com/qhanw)"
@@ -29,7 +30,9 @@
     "@ant-design/icons": "^5.0.1",
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
+    "@swc-node/jest": "^1.6.2",
     "@types/jest": "^29.4.0",
+    "@types/node": "^18.14.6",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "antd": "^5.3.0",
@@ -37,6 +40,8 @@
     "father": "^4.1.6",
     "husky": "^8.0.3",
     "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "jsdom": "^21.1.0",
     "lerna": "^6.5.1",
     "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",

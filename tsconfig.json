@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
+    "module": "esnext",
     "target": "esnext",
     "moduleResolution": "node",
     "jsx": "react-jsx",
@@ -13,8 +14,7 @@
     "declaration": true,
     "skipLibCheck": true,
     "paths": {
-      "@@/*": [".dumi/tmp/*"],
-      "@bizk/components": ["./packages/components/src/index.ts"]
+      "@@/*": [".dumi/tmp/*"]
     }
   },
   "include": [

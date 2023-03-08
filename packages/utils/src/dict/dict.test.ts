@@ -1,4 +1,8 @@
-import dict from './dict';
+/**
+ * @jest-environment jsdom
+ */
+
+import dict from '.';
 
 const data = {
   DICT001: {
@@ -42,35 +46,41 @@ const data = {
 };
 
 enum DictCode {
-  /** 数值校验类型
-   * @return SZJK04501 最小值
-   * @return SZJK04502 最大值
-   */
   SZJK045 = 'SZJK045',
 
-  SZJK04501 = 'SZJK04501',
+  DICT002 = 'DICT002',
 }
 
-dict.addPlugins([
-  function fetch() {
-    return localStorage.getItem('dict') || data;
-  },
-]);
+describe('idCardRegexp', () => {
+  dict.addPlugins([
+    function fetch() {
+      return localStorage.getItem('dict') || data;
+    },
+  ]);
 
-const zd1 = dict<DictCode>(DictCode.SZJK045);
+  test('take the value of DictCode SZJK045', () => {
+    expect(dict<DictCode>(DictCode.SZJK045)).toEqual(undefined);
+  });
 
-console.log(zd1);
+  test('take the value of DictCode DICT002', () => {
+    expect(dict<DictCode>(DictCode.DICT002)).toEqual([
+      { editable: false, label: '低', value: 'DICT002001' },
+      { editable: false, label: '中', value: 'DICT002002' },
+      { editable: false, label: '高', value: 'DICT002003' },
+    ]);
+  });
 
-console.log('zd1 ', zd1?.toMap());
+  test('take the Map value of DictCode DICT002', () => {
+    expect(dict<DictCode>(DictCode.DICT002)?.toMap()).toEqual(
+      new Map([
+        ['DICT002001', { text: '低' }],
+        ['DICT002002', { text: '中' }],
+        ['DICT002003', { text: '高' }],
+      ]),
+    );
+  });
 
-console.log('zd1', zd1?.toName());
-
-zd1?.map((c) => console.log(c));
-
-console.log('== update ========');
-
-dict.update?.();
-
-const d = dict<DictCode>(DictCode.SZJK045);
-
-console.log(d);
+  test('take the name of DictCode DICT002', () => {
+    expect(dict<DictCode>(DictCode.DICT002)?.toName()).toEqual('风险等级');
+  });
+});
