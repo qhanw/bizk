@@ -14,7 +14,8 @@
     "declaration": true,
     "skipLibCheck": true,
     "paths": {
-      "@@/*": [".dumi/tmp/*"]
+      "@@/*": [".dumi/tmp/*"],
+      "@bizk/components": ["./packages/components/src/index.ts"]
     }
   },
   "include": [
