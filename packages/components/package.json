@@ -1,6 +1,6 @@
 {
   "name": "@bizk/components",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "基于antd额外扩展配置的常用业务组件，用以提升业务开发效率，避免同一类似功能组件多次实现。",
   "keywords": [
     "antd",

@@ -1,6 +1,6 @@
 {
   "name": "@bizk/store",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "一个简单的用于处理本地信息存储的Storage库，默认存储方式为localStorage。",
   "keywords": [
     "store",
