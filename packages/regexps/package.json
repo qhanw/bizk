@@ -1,6 +1,6 @@
 {
   "name": "@bizk/regexps",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "常用正则表达式，统一应用站点正则校验，保障同一规则下数据安全。",
   "keywords": [
     "RegExp"
