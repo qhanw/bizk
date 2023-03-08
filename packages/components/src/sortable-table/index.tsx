@@ -12,11 +12,7 @@ import {
   restrictToParentElement,
 } from '@dnd-kit/modifiers';
 
-import { SortableItem } from './SortableItem';
-
-import './styles.scss';
-
-const prefixCls = 'bizkui';
+import Row from './Row';
 
 type SortableTableProps = {
   onChange: (data?: any) => void;
@@ -74,8 +70,7 @@ export default function SortableTable({
       <SortableContext items={items} strategy={verticalListSortingStrategy}>
         {React.cloneElement(children as React.ReactElement, {
           columns,
-          className: `${prefixCls}-dnd`,
-          ...(sortable ? { components: { body: { row: SortableItem } } } : {}),
+          ...(sortable ? { components: { body: { row: Row } } } : {}),
         })}
       </SortableContext>
     </DndContext>
