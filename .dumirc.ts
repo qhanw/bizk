@@ -15,10 +15,12 @@ export default defineConfig({
     atomDirs: [
       { type: 'utils', dir: 'packages/utils/src' },
       { type: 'component', dir: 'packages/components/src' },
+      { type: 'hooks', dir: 'packages/hooks/src' },
     ],
   },
   // 包引入配置
   alias: {
     '@bizk/components': path.resolve(__dirname, 'packages/components/src'),
+    '@bizk/hooks': path.resolve(__dirname, 'packages/hooks/src'),
   },
 });

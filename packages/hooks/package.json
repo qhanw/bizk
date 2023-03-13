@@ -1,0 +1,38 @@
+{
+  "name": "@bizk/hooks",
+  "version": "0.0.0",
+  "keywords": [
+    "antd",
+    "pro-table",
+    "hooks",
+    "useServerTableSelect"
+  ],
+  "description": "一套业务处理的hooks工具集。",
+  "homepage": "https://github.com/qhanw/bizk/tree/main/packages/hooks#readme",
+  "bugs": "https://github.com/qhanw/bizk/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qhanw/bizk"
+  },
+  "authors": [
+    "qhanw <whenhan@foxmail.com> (https://github.com/qhanw)"
+  ],
+  "scripts": {
+    "build": "father build",
+    "prepublishOnly": "father doctor && npm run build"
+  },
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "antd": ">=4.24.0",
+    "@ant-design/pro-components": ">=2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}
