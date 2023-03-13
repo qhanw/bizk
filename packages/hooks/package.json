@@ -1,6 +1,6 @@
 {
   "name": "@bizk/hooks",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "keywords": [
     "antd",
     "pro-table",
@@ -27,9 +27,9 @@
     "dist"
   ],
   "peerDependencies": {
-    "react": ">=16.9.0",
+    "@ant-design/pro-components": ">=2.0.0",
     "antd": ">=4.24.0",
-    "@ant-design/pro-components": ">=2.0.0"
+    "react": ">=16.9.0"
   },
   "publishConfig": {
     "access": "public"
