@@ -125,9 +125,10 @@ export default function useServerTableSelect<T, U = Record<string, any>>(
       type: selectType,
       selectableTotal,
       selectedRowKeys,
-      selected:
-        (selectType === 'all' && selectableTotal) || selectedRowKeys?.length,
-      // filename, 文件名称
+      selected: !!(
+        (selectType === 'all' && selectableTotal) ||
+        selectedRowKeys?.length
+      ),
       selectedTotal:
         selectType === 'all'
           ? (selectableTotal ?? total) - (unSelected?.length || 0)
@@ -137,7 +138,6 @@ export default function useServerTableSelect<T, U = Record<string, any>>(
   );
 
   const onSelectChange = (selectedKeys: React.Key[]) => {
-    // setSelectedName(selectedRows[0]?.ruleName);
     setSelectedRowKeys(selectedKeys);
 
     if (selectType === 'all') {
