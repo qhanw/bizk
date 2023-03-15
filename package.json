@@ -11,7 +11,9 @@
     "build": "father build",
     "build:deps": "father prebundle",
     "prepublishOnly": "father doctor && npm run build",
-    "test": "jest"
+    "test": "jest",
+    "changeset": "changeset",
+    "version": "changeset version"
   },
   "authors": [
     "qhanw <whenhan@foxmail.com> (https://github.com/qhanw)"
@@ -29,6 +31,7 @@
   "devDependencies": {
     "@ant-design/icons": "^5.0.1",
     "@ant-design/pro-components": "^2.4.1",
+    "@changesets/cli": "^2.26.0",
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
     "@swc-node/jest": "^1.6.2",
