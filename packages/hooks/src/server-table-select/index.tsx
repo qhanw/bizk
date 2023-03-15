@@ -60,7 +60,7 @@ export default function useServerTableSelect<T, U = Record<string, any>>(
     disabledRow,
     authKey = '',
     rowKey,
-    pagination,
+    pagination = {},
     ...other
   } = opts;
 
@@ -92,7 +92,7 @@ export default function useServerTableSelect<T, U = Record<string, any>>(
       },
       {
         manual: true,
-        onSuccess: ({ data: d }) => {
+        onSuccess: ({ data: d }, p) => {
           // 取出id集合，并过滤掉已存在allDataKeys中的ids
           if (d.length) {
             const ids = d
@@ -180,12 +180,6 @@ export default function useServerTableSelect<T, U = Record<string, any>>(
     queryParams,
   ]);
 
-  const request = async (params: any, sorter: any) => {
-    const query = adapterParams?.(params, sorter) || params;
-    setQueryParams(query);
-    return await fetchList(query);
-  };
-
   return {
     // 选择信息
     selectedInfo,
@@ -197,7 +191,12 @@ export default function useServerTableSelect<T, U = Record<string, any>>(
     // 表格属性配置
     options: {
       rowKey,
-      request,
+      request: async (params, sorter) => {
+        const query = adapterParams?.(params, sorter) || params;
+        setQueryParams(query);
+
+        return await fetchList(query);
+      },
 
       search: { labelWidth: 70, defaultCollapsed: true },
       onSubmit: resetSelection,

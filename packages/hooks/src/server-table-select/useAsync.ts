@@ -11,7 +11,7 @@ type AsyncOptions<TData, TParams extends any[]> = {
 //  reference: https://usehooks.com/useAsync/
 export default function useAsync<TData, TParams extends any[]>(
   //fn: Service<TData, TParams>,
-  fn: (params: any) => Promise<TData>,
+  fn: (...params: any) => Promise<TData>,
   opts?: AsyncOptions<TData, TParams>,
 ) {
   const [loading, setLoading] = useState(false);
@@ -24,7 +24,7 @@ export default function useAsync<TData, TParams extends any[]>(
       setLoading(true);
 
       try {
-        const res = await fn(args);
+        const res = await fn(...args);
         setData(res as TData);
         onSuccess?.(res as TData, args);
         setLoading(false);
