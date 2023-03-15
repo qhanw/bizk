@@ -12,6 +12,10 @@ features:
     link: /components
     emoji: 🌈
     description: 基于antd、pro-components组件库，封装的适用于业务的公共组件
+  - title: 'Hooks'
+    link: /hooks
+    emoji: 🫧
+    description: 一套业务处理的hooks基础工具集，提升各业务线开发效率。
   - title: Utils
     link: /utils
     emoji: ⚒️
@@ -22,6 +26,6 @@ features:
     description: 一个简单的，用于处理本地信息存储的 Storage 库，默认存储方式为localStorage
   - title: 'Regexps'
     link: /regexps
-    emoji: 🔥
+    emoji: 🧚
     description: 常用正则表达式，统一应用站点正则校验，保障同一规则下数据安全。
 ---

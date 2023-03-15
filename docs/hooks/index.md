@@ -21,4 +21,5 @@ pnpm add @bizk/hooks
 
 ### Hooks 列表
 
-- useBlackEndSelectTable
+- useServerTableSelect 服务端全选
+- useTheadStretch 表格表头伸缩
