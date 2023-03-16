@@ -13,7 +13,14 @@ type SelectedInfo = {
   selectedTotal: number;
 };
 
-type TableSelectOpts<T, U> = Omit<ProTableProps<T, U>, 'request'> & {
+type TableProps<T, U> = Omit<
+  ProTableProps<T, U>,
+  'request' | 'columns' | 'toolBarRender'
+>;
+
+type ReturnTableProps<T, U> = Omit<ProTableProps<T, U>, 'columns'>;
+
+type TableSelectOpts<T, U> = TableProps<T, U> & {
   request: (params: U, authKey: string) => Promise<any>;
 
   // 处理查询参数
@@ -32,13 +39,14 @@ type QueryCondition = {
   type: 'all' | 'current';
 };
 
-type ExtraTableSelectOpts = {
+type ExtraTableSelectOpts<T, U> = {
   // 已选择数据信息
   selectedInfo: SelectedInfo;
   // 重置全选状态
   resetSelection: () => void;
   // 取出查询参数
   takeQueryParams: () => Record<string, any>;
+  options: ReturnTableProps<T, U>;
 };
 
 // reference: https://stackoverflow.com/questions/58469229/react-with-typescript-generics-while-using-react-forwardref/58473012#58473012
@@ -50,9 +58,7 @@ type ExtraTableSelectOpts = {
 
 export default function useServerTableSelect<T, U = Record<string, any>>(
   opts: TableSelectOpts<T, U>,
-): ExtraTableSelectOpts & {
-  options: Partial<Omit<ProTableProps<T, U>, 'column'>>;
-} {
+): ExtraTableSelectOpts<T, U> {
   const {
     request: fetchApi,
     adapterParams,
@@ -198,7 +204,7 @@ export default function useServerTableSelect<T, U = Record<string, any>>(
         return await fetchList(query);
       },
 
-      search: { labelWidth: 70, defaultCollapsed: true },
+      search: { labelWidth: 70 },
       onSubmit: resetSelection,
 
       pagination: pagination
