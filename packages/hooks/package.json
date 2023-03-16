@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "build": "father build",
-    "prepublishOnly": "father doctor && npm run build"
+    "doctor": "father doctor"
   },
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
