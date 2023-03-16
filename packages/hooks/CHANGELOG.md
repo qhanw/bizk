@@ -1,7 +1,12 @@
 # Change Log
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+## 0.0.4
+
+### Patch Changes
+
+- fix: repair type definition
+
+All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## [0.0.3](https://github.com/qhanw/bizk/compare/@bizk/hooks@0.0.2...@bizk/hooks@0.0.3) (2023-03-15)
 
