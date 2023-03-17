@@ -23,3 +23,4 @@ pnpm add @bizk/hooks
 
 - useServerTableSelect 服务端全选
 - useTheadStretch 表格表头伸缩
+- useQueryParams 查询参数解析 (coming soon)
