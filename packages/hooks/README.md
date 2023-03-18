@@ -18,3 +18,4 @@ pnpm add @bizk/hooks
 ### 功能函数
 
 - useServerTableSelect
+- useTheadStretch
