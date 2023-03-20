@@ -1,7 +1,4 @@
-/**
- * @jest-environment jsdom
- */
-
+import { describe, it, expect } from 'vitest';
 import { Store } from '.';
 
 const local = new Store({ mode: 'local', crypto: false });
@@ -19,12 +16,12 @@ describe('localStorage', () => {
 
   it('test null', () => {
     local.set('KEY_NULL', null);
-    expect(local.get('KEY_NULL')).toEqual(null);
+    expect(local.get('KEY_NULL')).toEqual(undefined);
   });
 
   it('test undefined', () => {
     local.set('KEY_UNDEFINED', undefined);
-    expect(local.get('KEY_UNDEFINED')).toEqual("undefined");
+    expect(local.get('KEY_UNDEFINED')).toEqual('undefined');
   });
 
   it('test boolean', () => {

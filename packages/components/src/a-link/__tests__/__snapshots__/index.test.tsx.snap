@@ -1,0 +1,80 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`suite ALink > renders Button ALink component 1`] = `
+<div>
+  <a
+    class="ant-typography css-dev-only-do-not-override-ph9edi"
+    href="https://bizk.qhan.wang/"
+  >
+     
+    <button
+      class="ant-btn css-dev-only-do-not-override-ph9edi ant-btn-primary"
+      type="button"
+    >
+      <span>
+        Click me!
+      </span>
+    </button>
+  </a>
+</div>
+`;
+
+exports[`suite ALink > renders base 1`] = `
+<div>
+  <a
+    class="ant-typography css-dev-only-do-not-override-ph9edi"
+    href="https://bizk.qhan.wang/"
+  >
+     
+    Click me!
+  </a>
+</div>
+`;
+
+exports[`suite ALink > renders click 1`] = `
+<div>
+  <a
+    class="ant-typography css-dev-only-do-not-override-ph9edi"
+  >
+     
+    Click me!
+  </a>
+</div>
+`;
+
+exports[`suite ALink > renders disabled ALink component 1`] = `
+<div>
+  <a
+    class="ant-typography ant-typography-disabled css-dev-only-do-not-override-ph9edi"
+    href="https://bizk.qhan.wang/"
+  >
+     
+    Click me!
+  </a>
+</div>
+`;
+
+exports[`suite ALink > renders target 1`] = `
+<div>
+  <a
+    class="ant-typography css-dev-only-do-not-override-ph9edi"
+    href="https://bizk.qhan.wang/"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+     
+    Click me!
+  </a>
+</div>
+`;
+
+exports[`suite ALink > renders to 1`] = `
+<div>
+  <a
+    href="/blank"
+    target="_blank"
+  >
+    Click me!
+  </a>
+</div>
+`;
