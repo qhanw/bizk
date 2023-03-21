@@ -41,7 +41,12 @@ export class Store {
     return this.crypto ? Base64.decode(v) : v;
   }
 
-  private serialize = (obj: any) => JSON.stringify(obj);
+  private serialize = (obj: any) => {
+    if (isUndefined(obj)) {
+      return `${obj}`;
+    }
+    return JSON.stringify(obj);
+  };
 
   private deserialize = (str: string): any => {
     if (!str) return str;
@@ -118,7 +123,7 @@ export class Store {
       return;
     }
     if (isBoolean(val) || isNull(val) || isUndefined(val) || isNumber(val)) {
-      this.store[this.encode(key)] = this.encode(val);
+      this.store[this.encode(key)] = this.encode(this.serialize(val));
       return;
     }
 
