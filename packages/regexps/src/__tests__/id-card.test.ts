@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
-import { idCard } from './';
+import { idCard } from '..';
 
-describe('idCardRegexp', () => {
+describe('id-card regexp', () => {
   test('合格的身份证号', () => {
     expect(idCard.test('142701199309095656')).toEqual(true);
   });
