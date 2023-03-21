@@ -1,11 +1,16 @@
-import { describe, it, expect, test } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { describe, it, expect, afterEach } from 'vitest';
+import { render, screen, cleanup } from '@testing-library/react';
 
 import { BrowserRouter } from 'react-router-dom';
 
 import ALink from '../index';
 
 describe('suite ALink', () => {
+  // Default on import: runs it after each test.
+  afterEach(() => {
+    cleanup();
+  });
+
   it('renders base', () => {
     const { container } = render(
       <ALink href="https://bizk.qhan.wang/">Click me!</ALink>,
@@ -58,7 +63,7 @@ describe('suite ALink', () => {
     expect(container).toMatchSnapshot();
   });
 
-  test('renders ALink component', () => {
+  it('renders ALink component', () => {
     render(<ALink href="https://bizk.qhan.wang/">Click me!</ALink>);
 
     expect(screen.getByText('Click me!')).toBeTruthy();
