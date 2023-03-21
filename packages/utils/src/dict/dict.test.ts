@@ -40,15 +40,26 @@ const data = {
   DICT003001: { label: '待处置', value: 'DICT003001', editable: false },
   DICT003002: { label: '处置中', value: 'DICT003002', editable: false },
   DICT003003: { label: '已关闭', value: 'DICT003003', editable: false },
+
+  DICT004: {
+    label: '测试004',
+    value: 'DICT004',
+    children: {
+      DICT00401: { label: '测试0041', value: 'DICT00401' },
+      DICT00402: { label: '测试0042', value: 'DICT00402' },
+    },
+  },
 };
 
 enum DictCode {
   SZJK045 = 'SZJK045',
 
   DICT002 = 'DICT002',
+
+  DICT004 = 'DICT004',
 }
 
-describe('idCardRegexp', () => {
+describe('dict suit', () => {
   dict.addPlugins([
     function fetch() {
       return localStorage.getItem('dict') || data;
@@ -79,5 +90,17 @@ describe('idCardRegexp', () => {
 
   test('take the name of DictCode DICT002', () => {
     expect(dict<DictCode>(DictCode.DICT002)?.toName()).toEqual('风险等级');
+  });
+
+  test('take the name of DictCode DICT002 after update dict', () => {
+    dict.update();
+    expect(dict<DictCode>(DictCode.DICT002)?.toName()).toEqual('风险等级');
+  });
+
+  test('in not array take the Map value of DictCode DICT004', () => {
+    expect(dict<DictCode>(DictCode.DICT004)?.toMap()).toEqual({
+      DICT00401: { label: '测试0041', value: 'DICT00401' },
+      DICT00402: { label: '测试0042', value: 'DICT00402' },
+    });
   });
 });

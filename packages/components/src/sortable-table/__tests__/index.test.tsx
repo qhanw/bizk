@@ -3,6 +3,7 @@ import { render, screen, cleanup } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import { Table } from 'antd';
+import { EditableProTable } from '@ant-design/pro-components';
 
 import { useState } from 'react';
 
@@ -101,5 +102,31 @@ describe('suite SortableTable', () => {
     const menu = container.querySelector("[aria-label='menu']");
 
     expect(menu).toBeFalsy();
+  });
+
+  it('renders SortableTable component with EditableProTable', async () => {
+    const STable = () => {
+      const [dataSource, setDataSource] = useState(data);
+
+      const columns = [
+        { title: 'order', dataIndex: 'id' },
+        { title: 'name', dataIndex: 'name' },
+        { title: 'age', dataIndex: 'age' },
+      ];
+
+      return (
+        <SortableTable onChange={(d: any) => setDataSource(d)}>
+          <EditableProTable
+            rowKey="id"
+            search={false}
+            columns={columns}
+            value={dataSource}
+          />
+        </SortableTable>
+      );
+    };
+    render(<STable />);
+
+    expect(screen.getByText('order')).toBeTruthy();
   });
 });
