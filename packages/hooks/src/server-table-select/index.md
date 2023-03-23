@@ -44,13 +44,13 @@ const {
 
 其它配置参数请查阅[ProTableProps](https://procomponents.ant.design/components/table?current=1&pageSize=5#protable)
 
-| 参数          | 说明             | 类型                                         | 默认值                                 |
-| :------------ | :--------------- | :------------------------------------------- | :------------------------------------- |
-| request       | 表格数据请求 API | (params: U, authKey: string) => Promise<any> | -                                      |
-| adapterParams | 处理查询参数     | (params: any, sorter: any) => any            | -                                      |
-| batchParams   | 批量操作参数配置 | Record<string, any>                          | { includes: string; excludes: string } |
-| disabledRow   | 禁用表格行       | (record: any) => boolean                     | -                                      |
-| authKey       | 权限 Key         | string                                       | -                                      |
+| 参数          | 说明             | 类型                                           | 默认值                                 |
+| :------------ | :--------------- | :--------------------------------------------- | :------------------------------------- |
+| request       | 表格数据请求 API | (params: U, authKey: string) => Promise\<any\> | -                                      |
+| adapterParams | 处理查询参数     | (params: any, sorter: any) => any              | -                                      |
+| batchParams   | 批量操作参数配置 | Record<string, any>                            | { includes: string; excludes: string } |
+| disabledRow   | 禁用表格行       | (record: any) => boolean                       | -                                      |
+| authKey       | 权限 Key         | string                                         | -                                      |
 
 #### SelectedInfo
 
