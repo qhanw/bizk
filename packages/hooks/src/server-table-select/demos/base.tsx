@@ -3,22 +3,36 @@ import { useServerTableSelect } from '@bizk/hooks';
 import { Button } from 'antd';
 import { useState } from 'react';
 
-const data = [
-  { id: 1, name: 'Andy', age: 18 },
-  { id: 2, name: 'Amy', age: 45 },
-  { id: 3, name: 'Tom', age: 32 },
-  { id: 4, name: 'Anna', age: 30 },
-  { id: 5, name: 'Jue', age: 25 },
-];
+const data = (() => {
+  const d = [];
 
-const fetchList = () => {
+  const names = ['Andy', 'Amy', 'Tom', 'Anna', 'Jue'];
+
+  for (let i = 0; i < 50; i += 1) {
+    d.push({
+      id: i + 1,
+      name: i > 4 ? `${names[i % 5]}-${i}` : names[i],
+      age: Math.floor(Math.random() * 100),
+    });
+  }
+
+  return d;
+})();
+
+const fetchList = (params?: any) => {
+  const { current, pageSize } = params;
+  const cursor = (current - 1) * pageSize;
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve({
-        success: false,
-        data: { wholeOperationNum: 100, items: data, totalNum: 5 },
+        success: true,
+        data: {
+          wholeOperationNum: 100,
+          items: data.slice(cursor, cursor + pageSize),
+          totalNum: data.length,
+        },
       });
-    }, 2000);
+    }, 1000);
   });
 };
 
