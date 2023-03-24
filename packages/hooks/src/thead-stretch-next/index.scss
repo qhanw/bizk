@@ -1,0 +1,16 @@
+.drag-cell-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+}
+.cursor::before {
+  content: '';
+  width: 1px;
+  height: 100%;
+  background: #f00;
+  position: absolute;
+  top: 0;
+  transform: translateX(var(--translate-x));
+  z-index: 1;
+}

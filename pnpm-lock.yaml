@@ -76,13 +76,19 @@ importers:
 
   packages/hooks:
     specifiers:
+      '@dnd-kit/core': ^6.0.8
+      '@dnd-kit/modifiers': ^6.0.1
+      '@dnd-kit/utilities': ^3.2.1
       '@types/lodash': ^4.14.191
       '@types/react-resizable': ^3.0.3
       lodash: ^4.17.21
-      react-resizable: ^3.0.4
+      react-resizable: ^3.0.5
     dependencies:
+      '@dnd-kit/core': 6.0.8
+      '@dnd-kit/modifiers': 6.0.1_@dnd-kit+core@6.0.8
+      '@dnd-kit/utilities': 3.2.1
       lodash: 4.17.21
-      react-resizable: 3.0.4
+      react-resizable: 3.0.5
     devDependencies:
       '@types/lodash': 4.14.191
       '@types/react-resizable': 3.0.3
@@ -12110,8 +12116,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /react-resizable/3.0.4:
-    resolution: {integrity: sha512-StnwmiESiamNzdRHbSSvA65b0ZQJ7eVQpPusrSmcpyGKzC0gojhtO62xxH6YOBmepk9dQTBi9yxidL3W4s3EBA==}
+  /react-resizable/3.0.5:
+    resolution: {integrity: sha512-vKpeHhI5OZvYn82kXOs1bC8aOXktGU5AmKAgaZS4F5JPburCtbmDPqE7Pzp+1kN4+Wb81LlF33VpGwWwtXem+w==}
     peerDependencies:
       react: '>= 16.3'
     dependencies:

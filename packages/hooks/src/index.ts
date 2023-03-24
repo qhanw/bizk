@@ -6,3 +6,5 @@ export { ResizableUniqIdPrefix } from './thead-stretch/utils/useGetDataIndexColu
 
 export { default as useTheadStretch } from './thead-stretch';
 export type { OptionsType } from './thead-stretch';
+
+export { default as useTheadStretchNext } from './thead-stretch-next';
