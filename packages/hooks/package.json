@@ -19,7 +19,9 @@
   ],
   "scripts": {
     "build": "father build",
-    "doctor": "father doctor"
+    "doctor": "father doctor",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
