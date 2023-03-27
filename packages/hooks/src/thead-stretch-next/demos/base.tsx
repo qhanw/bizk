@@ -1,5 +1,5 @@
 import { useReducer, useState, useMemo } from 'react';
-import { Space, Table, Tag } from 'antd';
+import { Table, Tag } from 'antd';
 import { useTheadStretchNext } from '@bizk/hooks';
 
 const data = [
@@ -35,7 +35,6 @@ export default () => {
       title: 'Name',
       dataIndex: 'name',
       key: 'name',
-      width: 300,
       ellipsis: true,
       render: (text: any) => (
         <a onClick={() => setDeps((t) => t + 1)}>
@@ -56,7 +55,7 @@ export default () => {
       dataIndex: 'address',
       key: 'address',
       ellipsis: true,
-      width: 200,
+     // width: 200,
     },
     {
       title: 'Tags',
@@ -82,19 +81,18 @@ export default () => {
     },
     {
       title: 'render',
-      key: 'action',
-      render: (text: any, record: any) => (
-        <Space size="middle">
-          <a>Invite {record.name}</a>
-          <a
-            onClick={() => {
-              forceRender();
-              alert('render');
-            }}
-          >
-            render
-          </a>
-        </Space>
+      key: 'option',
+      draggable: false,
+      width: 100,
+      render: () => (
+        <a
+          onClick={() => {
+            forceRender();
+            alert('render');
+          }}
+        >
+          render
+        </a>
       ),
     },
   ];
@@ -112,7 +110,7 @@ export default () => {
       columns={cls}
       components={components}
       dataSource={data}
-      // scroll={{ x: tableWidth }}
+      scroll={{ x: tableWidth }}
     />
   );
 };

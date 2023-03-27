@@ -3,7 +3,7 @@ import { restrictToHorizontalAxis } from '@dnd-kit/modifiers';
 
 export function Wrapper(props: any) {
   return (
-    <DndContext modifiers={[restrictToHorizontalAxis]} >
+    <DndContext modifiers={[restrictToHorizontalAxis]}>
       <table {...props} />
     </DndContext>
   );

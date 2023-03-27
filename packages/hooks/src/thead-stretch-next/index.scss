@@ -1,16 +1,20 @@
-.drag-cell-ellipsis {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  word-break: keep-all;
-}
-.cursor::before {
-  content: '';
-  width: 1px;
-  height: 100%;
-  background: #f00;
-  position: absolute;
-  top: 0;
-  transform: translateX(var(--translate-x));
-  z-index: 1;
+.cursor {
+  position: relative;
+  &::before {
+    content: '';
+    cursor: col-resize;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 2px,
+      red 2px,
+      red 3px,
+      transparent 3px
+    );
+    position: absolute;
+    top: 0;
+    transform: translateX(var(--dnd-translate-x));
+    z-index: 1;
+  }
 }
