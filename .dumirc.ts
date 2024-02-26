@@ -8,8 +8,8 @@ export default defineConfig({
     github: 'https://github.com/qhanw/bizk',
     apiHeader: false,
     footerConfig: {
-      bottom: 'Powered by <a href="http://qhan.wang">Qhan W</a>',
-      columns: false,
+      bottom: 'Powered by <a href="https://qhan.wang">Qhan W</a>',
+      columns: [],
     },
   },
 
