@@ -48,12 +48,12 @@ export default function SortableTable({
     if (!dataSource?.length) return;
     const { active, over } = event;
 
-    if (active[rowKey] !== over?.[rowKey]) {
+    if (active.id !== over?.id) {
       const oldIndex = dataSource.findIndex(
-        (item: any) => item[rowKey] === active[rowKey],
+        (item: any) => item[rowKey] === active.id,
       );
       const newIndex = dataSource.findIndex(
-        (item: any) => item[rowKey] === over?.[rowKey],
+        (item: any) => item[rowKey] === over?.id,
       );
 
       const next = arrayMove(dataSource, oldIndex, newIndex);
